@@ -30,6 +30,9 @@ public class InteractiveCut : ModuleRules
 			new string[]
 			{
 				"Core",
+				"CoreUObject",
+				"InputCore",
+				"UMG", "Slate", "SlateCore", // Why do need those?
 				"LevelSequence",
 				"MovieScene",
 				// ... add other public dependencies that you statically link with here ...

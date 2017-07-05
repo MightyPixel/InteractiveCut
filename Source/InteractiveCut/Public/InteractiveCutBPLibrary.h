@@ -28,9 +28,6 @@ class UInteractiveCutBPLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_UCLASS_BODY()
 
-	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Execute Sample function", Keywords = "InteractiveCut sample test testing"), Category = "InteractiveCutTesting")
-	static float InteractiveCutSampleFunction(float Param);
-
-	//UFUNCTION(BlueprintCallable, meta = (DisplayName = "Interactive Cut Moment", Keywords = "Interactive Cut Moment"), Category = "InteractiveCutTesting")
-	//static void InteractiveCutMoment(FName IntroSequenceName, FName SuccessSequenceName, FName FallbackSequenceName, FTimespan ReactionTime, FInputActionKeyMapping SuccessKey);
+	UFUNCTION(BlueprintPure, meta = (DisplayName = "Interactive Cut Moment", CompactNodeTitle = "Cut Moment", Keywords = "Interactive cut moment qte quick time event"), Category = Game)
+	static float InteractiveCutMoment(const FName& IntroSequenceName, const FName& SuccessSequenceName, const FName& FallbackSequenceName, const FTimespan& ReactionTime, const FInputActionKeyMapping& SuccessKey);
 };

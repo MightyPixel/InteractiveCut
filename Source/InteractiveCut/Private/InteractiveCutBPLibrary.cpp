@@ -3,21 +3,26 @@
 #include "InteractiveCutBPLibrary.h"
 #include "InteractiveCut.h"
 
+#include "Runtime/Engine/Classes/GameFramework/PlayerInput.h"
+#include "Runtime/Engine/Classes/GameFramework/InputSettings.h"
+#include "Runtime/CoreUObject/Public/UObject/UObjectGlobals.h"
+#include "Runtime/LevelSequence/Public/LevelSequence.h"
+#include "Runtime/LevelSequence/Public/LevelSequencePlayer.h"
+#include "Runtime/LevelSequence/Public/LevelSequenceActor.h"
+
 UInteractiveCutBPLibrary::UInteractiveCutBPLibrary(const FObjectInitializer& ObjectInitializer)
 : Super(ObjectInitializer)
 {
 
 }
 
-float UInteractiveCutBPLibrary::InteractiveCutSampleFunction(float Param)
+float UInteractiveCutBPLibrary::InteractiveCutMoment(const FName& IntroSequenceName, const FName& SuccessSequenceName, const FName& FallbackSequenceName, const FTimespan& ReactionTime, const FInputActionKeyMapping& SuccessKey)
 {
-	return -1;
-}
+	FStringAssetReference SequenceName(IntroSequenceName.ToString());
 
-static void InteractiveCutMoment(FName IntroSequenceName, FName SuccessSequenceName, FName FallbackSequenceName, FTimespan ReactionTime, FInputActionKeyMapping SuccessKey)
-{
-	FStringAssetReference SequenceName("/Game/NewLevelSequence.NewLevelSequence");
 	// ULevelSequence* Asset = Cast<ULevelSequence>(SequenceName.TryLoad());
-	// return -1;
+	// ULevelSequencePlayer::CreateLevelSequencePlayer();
+
+	return -1;
 }
 
