@@ -14,3 +14,10 @@ float UInteractiveCutBPLibrary::InteractiveCutSampleFunction(float Param)
 	return -1;
 }
 
+static void InteractiveCutMoment(FName IntroSequenceName, FName SuccessSequenceName, FName FallbackSequenceName, FTimespan ReactionTime, FInputActionKeyMapping SuccessKey)
+{
+	FStringAssetReference SequenceName("/Game/NewLevelSequence.NewLevelSequence");
+	// ULevelSequence* Asset = Cast<ULevelSequence>(SequenceName.TryLoad());
+	// return -1;
+}
+

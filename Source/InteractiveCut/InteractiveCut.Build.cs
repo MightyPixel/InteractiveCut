@@ -30,7 +30,8 @@ public class InteractiveCut : ModuleRules
 			new string[]
 			{
 				"Core",
-                "LevelSequence",
+				"LevelSequence",
+				"MovieScene",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);

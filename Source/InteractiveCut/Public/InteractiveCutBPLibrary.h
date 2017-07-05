@@ -4,7 +4,7 @@
 
 #include "Engine.h"
 #include "InteractiveCutBPLibrary.generated.h"
-// #include "LevelSequence.h"
+
 
 /* 
 *	Function library class.
@@ -30,4 +30,7 @@ class UInteractiveCutBPLibrary : public UBlueprintFunctionLibrary
 
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Execute Sample function", Keywords = "InteractiveCut sample test testing"), Category = "InteractiveCutTesting")
 	static float InteractiveCutSampleFunction(float Param);
+
+	//UFUNCTION(BlueprintCallable, meta = (DisplayName = "Interactive Cut Moment", Keywords = "Interactive Cut Moment"), Category = "InteractiveCutTesting")
+	//static void InteractiveCutMoment(FName IntroSequenceName, FName SuccessSequenceName, FName FallbackSequenceName, FTimespan ReactionTime, FInputActionKeyMapping SuccessKey);
 };
